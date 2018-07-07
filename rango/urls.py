@@ -3,5 +3,5 @@ from rango import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    pah('about/', views.about, name='about'),
+    path('about/', views.about, name='about'),
 ]
