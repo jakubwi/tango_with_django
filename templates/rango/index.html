@@ -10,6 +10,7 @@
         <h1>Rango says...</h1>
         <div>hey there partner!</div>
 
+        <h2>Most liked categories:</h2>
         <div>
         {% if categories %}
         <ul>
@@ -22,6 +23,18 @@
         {% endif %}
         </div>
 
+        <h2>Most viewed pages:</h2>
+        <div>
+            {% if pages %}
+            <ul>
+                {% for page in pages %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <strong>There are no pages to list!</strong>
+            {% endif %}
+            </div>
 
         <div>
             <a href="/rango/about/">About</a> <br />
