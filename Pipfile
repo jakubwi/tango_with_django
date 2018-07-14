@@ -8,6 +8,7 @@ django = "*"
 pylint = "*"
 pillow = "*"
 django-registration-redux = "*"
+django-bootstrap-toolkit = "*"
 
 [dev-packages]
 pylint = "*"
