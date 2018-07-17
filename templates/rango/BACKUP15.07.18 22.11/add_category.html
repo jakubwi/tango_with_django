@@ -4,8 +4,8 @@
 {% block title_block %}Add a Category{% endblock %}
 
 {% block body_block %}
-    <form class="pure-form" id="category_form" method="post" action="/rango/add_category/">
-        <h2>Add a Category</h2>
+    <form id="category_form" method="post" action="/rango/add_category/">
+        <h2 class="form-signin-heading">Add a Category</h2>
                 {% csrf_token %}
                 {% for hidden in form.hidden_fields %}
                     {{ hidden }}
@@ -15,7 +15,7 @@
                     {{ field.help_text }} <br />
                     {{ field }} <br />
                 {% endfor %} <br />
-            <button class="pure-button pure-button-primary" type="submit" name="submit">Create Category</button>
+            <button class="btn btn-primary" type="submit" name="submit">Create Category</button>
             
             </form>
 {% endblock %} 

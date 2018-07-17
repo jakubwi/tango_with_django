@@ -1,11 +1,14 @@
-<ul>
+
 {% if cats %}
     {% for c in cats %}
         {% if c == act_cat %}
-        <li><strong><a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a></strong></li>
+        <ul class="pure-menu-list">
+        <li class="pure-menu-item"><strong><a href="{% url 'rango:show_category' c.slug %}" class="pure-menu-link">{{ c.name }}</a></strong></li>
+        </ul>
         {% else %}
-        <li><a href="{% url 'rango:show_category' c.slug %}">{{ c.name }}</a></li>
+        <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="{% url 'rango:show_category' c.slug %}" class="pure-menu-link">{{ c.name }}</a></li>
+        </ul>
         {% endif %}
     {% endfor %}
 {% endif %}
-</ul>
