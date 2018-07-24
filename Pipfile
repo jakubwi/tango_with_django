@@ -5,13 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
-pylint = "*"
 pillow = "*"
 django-registration-redux = "*"
 django-bootstrap-toolkit = "*"
+pyflakes = "*"
 
 [dev-packages]
-pylint = "*"
 
 [requires]
 python_version = "3.7"
