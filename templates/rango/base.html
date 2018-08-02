@@ -43,6 +43,9 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'auth_logout' %}?next=/rango/">Logout</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'rango:profile' user.username %}">Profile</a>
+            </li>
         {% else %}
             <li class="nav-item">
               <a class="nav-link" href="{% url 'registration_register' %}">Register Here</a>
@@ -52,7 +55,7 @@
             </li>
         {% endif %}
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'rango:search' %}">Search</a>
+          <a class="nav-link" href="{% url 'search' %}">Search</a>
         </li>
         </ul>
       </div>

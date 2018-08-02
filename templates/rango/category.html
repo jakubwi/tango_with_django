@@ -24,7 +24,21 @@
             <strong>No pages currently in category.</strong>
         {% endif %}
             {% if user.is_authenticated %}
-                <a href="{% url 'rango:add_page' category.slug %}">Add a Page</a>
+            <a href="{% url 'rango:add_page' category.slug %}">Add a Page</a>
+            <hr />
+            <script>
+                (function() {
+                  var cx = '009657067536444870470:y6h-dnbsfk0';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
+              <gcse:search></gcse:search>
+                
             {% else %}
                 Login to Add a Page!
             {% endif %}
