@@ -1,15 +1,18 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
-{% block title_block %}
-{{ user.username }} Profile
-{% endblock %}
+{% block title_block %}{{ selecteduser.username }} Profile{% endblock %}
 
 {% block body_block %}
-<h1>{{ user.username }} Profile</h1>
-<img src="{{ MEDIA_URL }}{{ userprofile.picture }}" width="300" height="300" alt="{{ user.username }}" />
+<br />
+<h1>{{ selecteduser.username }} Profile</h1>
+{% if userprofile.picture %}
+    <img src="{{ MEDIA_URL }}{{ userprofile.picture }}" width="300" alt="{{ selecteduser.username }}" />
+{% else %}
+    <img src="{{ MEDIA_URL}}diobel.jpg" width="300" alt="{{ selecteduser.username }}" />
+{% endif %}
 <br/>
 <div>
-    {% if user.username == user.username %}
+    {% if selecteduser.username == user.username %}
     <form method="post" action="." enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}

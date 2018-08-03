@@ -16,4 +16,5 @@ urlpatterns = [
     path('goto/', views.track_url, name='goto'),
     path('register_profile/', views.register_profile, name='register_profile'),
     re_path(r'^profile/(?P<username>[\w\-]+)/$', views.profile, name='profile'),
+    path('profiles/', views.list_profiles, name='list_profiles'),
 ]
