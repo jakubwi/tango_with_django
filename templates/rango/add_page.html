@@ -6,8 +6,8 @@
 {% block body_block %}
 <br />
         {% if category %}
-        <form id="page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/"></form>
-        <h2 class="form-signin-heading">Add a Page to <a href="/rango/category/{{category.slug}}/">{{category.name}}</a></h2>
+        <form id="page_form" method="post" action="/rango/category/{{ category.slug }}/add_page/">
+        <h2 class="form-signin-heading">Add a Page to <a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a></h2>
                 {% csrf_token %}
                 {% for hidden in form.hidden_fields %}
                     {{ hidden }}
@@ -19,6 +19,19 @@
                 {% endfor %} <br />
                 <button class="btn btn-primary" type="submit" name="submit">Add Page</button>
         </form>
+        <hr />
+        <script>
+            (function() {
+              var cx = '009657067536444870470:y6h-dnbsfk0';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
         {% else %}
             <p>The specified category does not exist!</p>
         {% endif%}
