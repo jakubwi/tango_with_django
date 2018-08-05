@@ -66,10 +66,10 @@
       </div>
     </nav>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-2 col-md-1 sidebar">
-            
+ 
+    <div class="row">
+        <div class="col-sm-1">
+            <br />
               <h5>Type to find a category</h5>
               <form>
               <input class="search-query form-control" type="text" name="suggestion" value="" id="suggestion" />
@@ -82,11 +82,11 @@
             {% get_category_list category %}
             {% endblock %} -->
         </div>
-        <div class="col-sm-10 offset-sm-2 col-md-11 offset-md-1 main">
+        <div class="col-sm-11">
          {% block body_block %}{% endblock %}
         </div>
       </div>
-    </div>
+  
 
      <!-- Bootstrap core JavaScript
     ================================================== -->
