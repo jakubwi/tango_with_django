@@ -19,6 +19,7 @@ from django.conf.urls.static import static
 from django.urls import include, path
 from django.views.generic.base import TemplateView
 from registration.backends.simple.urls import RegistrationView
+from registration.backends.simple.views import RegistrationView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from rango import views
@@ -29,7 +30,7 @@ class RestrictedView(TemplateView):
 
 class MyRegistrationView(RegistrationView):
     def get_success_url(self, user):
-        return '/rango/register_profile/'
+        return "/rango/register_profile/"
 
 class TopSearchView(TemplateView):
     template_name = "rango/search.html"
